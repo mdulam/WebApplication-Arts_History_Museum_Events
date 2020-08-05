@@ -1,0 +1,81 @@
+use Events
+db.dropDatabase()
+use Events
+db.createCollection('connections')
+db.connections.insertMany([
+{ 
+	connectionID:"1",
+  	connectionName:"Beauty Rich and Rare",
+ 	connectionTopic:"Current Events and Exhibitions",
+ 	connectionDetail:"Beauty Rich and Rare follows Captain James Cook’s 1768 voyage to Tahiti, New Zealand, and Australia. On board was English naturalist Sir Joseph Banks to record Australia`s flora and fauna in meticulous detail. To mark the 250th anniversary of the voyage, the Art and History Museum Events created and produced Beauty Rich and Rare – an immersive sound and light display featuring original illustrations, charts, and Banks’ journals.",
+ 	connectionDuration:"2020-02-20  - 2020-02-28",
+  	connectionTimings:"14:00",
+ 	connectionHostedBy:"Sai Meghana",
+	userID:"Megh001"
+},
+{ 
+	connectionID:"2" ,
+ 	connectionName:"Ramayana",
+ 	connectionTopic:"Current Events and Exhibitions",
+ 	connectionDetail:"The exhibition consists of a hundred miniatures from the collection of the National Museum in New Delhi, India. Together, they illustrate the course of the entire Ramayana story and include some real treasures. At the same time, they provide a review of the major schools that, between the sixteenth and nineteenth centuries, worked the Ramayana into their imagery. This event is an opportunity to savour the art of the miniature, in which Indian painters displayed such great mastery in the unique way they painted man and nature.",
+  	connectionDuration:"2020-02-20  - 2020-02-28",
+  	connectionTimings:"14:00",
+ 	connectionHostedBy:"Sai Kumar",
+	userID:"Megh002"
+},
+{
+	connectionID:"3" ,
+  	connectionName:"Andy Warhol: Revelation",
+ 	connectionTopic:"Current Events and Exhibitions",
+  	connectionDetail:"Andy Warhol: Revelation is the first exhibition to comprehensively examine the Pop artist’s complex Catholic faith in relation to his artistic production. Revelation will feature over 100 objects from the museum’s permanent collection, including archival materials, drawings, paintings, prints, and film. Rare source material and newly discovered items will provide an intimate look on Warhol’s creative process. Through both obscure works such as the “sunset” film commission from 1967, and late masterpieces like the pink Last Supper (1986) the exhibition will present a fresh perspective on the artist.",
+  	connectionDuration:"2020-02-20  - 2020-02-28",
+  	connectionTimings:"14:00",
+  	connectionHostedBy:"Sai Meghana",
+	userID:"Megh003"
+},
+{ 
+	connectionID:"4",
+  	connectionName:"Model of Rome",
+  	connectionTopic:"Upcoming Events and Exhibitions",
+ 	connectionDetail:"The model of Rome is one of the masterpieces of the Art and History Museum which takes you on a journey to Rome in the fourth century CE and discover everything about the Eternal City and its inhabitants in our restored Model of Rome and its renewed setting. The setting of the model includes videos, 3D animations, touchscreens and augmented reality . Those technological features allow you to discover everything there is to know about the model, its maker Paul Bigot, the most important buildings in ancient Rome and how life was for its inhabitants.This interactive and immersive experience transports you back to Rome at its architectural and monumental peak: the 4th century CE!",
+  	connectionDuration:"2020-02-20  - 2020-02-28",
+  	connectionTimings:"14:00",
+  	connectionHostedBy:"Ramachandra Gopal",
+	userID:"Megh001"
+},
+{
+	connectionID:"5",
+  	connectionName:"Inter-Resonance: Inter-Organics",
+ 	connectionTopic:"Upcoming Events and Exhibitions",
+  	connectionDetail:"Inter-Resonance: Inter-Organics, Japanese Performance and Sound Art will focus on performance and sound-based installations that imagine new ecologies of nature and materiality.",
+  	connectionDuration:"2020-02-20  - 2020-02-28",
+  	connectionTimings:"14:00",
+  	connectionHostedBy:"Sai Kumar",
+	userID:"Megh002"
+},
+{
+	connectionID:"6",
+  	connectionName:"Beyond Planet Earth: The future of space exploration",
+  	connectionTopic:"Upcoming Events and Exhibitions",
+  	connectionDetail:"Beyond Planet Earth: The Future of Space Exploration offers a vision of the future of space travel as it boldly examines humanity`s next steps in our solar system and beyond",
+  	connectionDuration:"2020-02-20  - 2020-02-28",
+  	connectionTimings:"14:00",
+  	connectionHostedBy:"Ramachandra Gopal",
+	userID:"Megh003"
+}
+])
+
+db.createCollection('users')
+db.users.insertOne({userID: 'Megh007' , firstName: 'Meghana' , lastName:'Reddy' , emailID:'mdulam@uncc.edu' , address:'217 Barton creek drive' , password:'ce3f2bdd086fff297bff9a432e7e90d23cba9775e9cf53d6f5183247e3424774aaadb92efc3dc5c64d7981598965eb10bb955530618bf4849593cd136a181cac', salt:'eb5ea4de5144ed1c'})
+db.users.insertOne({userID: 'Megh008' , firstName: 'Sai Meghana' , lastName:'Dulam' , emailID:'mdulam@uncc.edu' , address:'217 Barton creek drive' , password:'518acc026452b58f39107c5880ec04cdd247a6a8e528aa02268fb424480f65b157e4499352b3f89c318f631d835f8edfdd40b653f70e528405249ad69d00be52', salt:'7f2815bb24f85cd9'})
+
+
+db.createCollection('userprofiles')
+db.userprofiles.insertMany([
+{userID:'Megh001',userConnections: [{connectionID:"4" , connectionName:"Model of Rome", connectionTopic:"Upcoming Events and Exhibitions", rsvp:'yes'},
+{connectionID:"1" ,connectionName:"Beauty Rich and Rare", connectionTopic:"Current Events and Exhibitions", rsvp:'maybe'}]},
+{userID:'Megh002',userConnections: [{connectionID:"5" ,connectionName:"Inter-Resonance: Inter-Organics", connectionTopic:"Upcoming Events and Exhibitions", rsvp:'yes'},
+{connectionID:"2" , connectionName:"Ramayana", connectionTopic:"Current Events and Exhibitions", rsvp:'no'}]},
+{userID:'Megh003',userConnections: [{connectionID:"6" ,connectionName:"Beyond Planet Earth: The future of space exploration", connectionTopic:"Upcoming Events and Exhibitions", rsvp:'maybe'},
+{connectionID:"3" , connectionName:"Andy Warhol: Revelation", connectionTopic:"Current Events and Exhibitions", rsvp:'yes'}]}]);
+])
