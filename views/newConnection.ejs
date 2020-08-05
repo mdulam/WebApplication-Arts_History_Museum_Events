@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>New Connection Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="assets/styles/stylesheet.css">
+</head>
+
+<body>
+	<% if(session!=undefined){%>
+	<%- include ('partials/header.ejs'); %>
+	<%- include ('partials/navigation3.ejs') -%>
+	<%} else { %>
+	<%- include ('partials/header2.ejs'); %>
+	<%- include ('partials/navigation2.ejs') -%>
+	<% } %>
+	<main>
+		<div class="container">
+			<form action="/newConnection" method="post">
+				<label for="connectionName">Event or Exhibition Name</label>
+				<input type="text" id="connectionName" name="connectionName" placeholder="Your connection name..">
+				<label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'connectionName') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+    			<label for="connectionTopic">Type of Event or Exhibition</label>
+				<input type="text" id="connectionTopic" name="connectionTopic" placeholder="Event type or Exhibition type..">
+				<label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'connectionTopic') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+				<label for="connectionDuration">Start date:</label>
+				<input type="date" id="connectionDuration" name="connectionDuration"  >
+				<label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'connectionDuration') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+
+				<label for="connectionDurationEnd">End date:</label>
+				<input type="date" id="connectionDurationEnd"name="connectionDurationEnd" >
+				<label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'connectionDurationEnd') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+
+				<label for="connectionTimings">Choose a time for your Event or Exhibition:</label>
+				<input type="time" id="connectionTimings" name="connectionTimings">
+				<label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'connectionTimings') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+
+    			<label for="details">Details</label>
+				<textarea id="details" name="details" placeholder="Describe the event or exhibition.." style="height:100px"></textarea>
+				<label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'details') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+
+    			<input type="submit" class="btn" value="Submit">
+  			</form>
+		</div>
+
+
+	</main>
+    <%- include ('partials/footer.ejs'); -%>
+</body>
+
+</html>

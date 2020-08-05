@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SavedConnections Page</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/styles/stylesheet.css">
+	</head>
+	<body>
+		<%- include ('partials/header.ejs'); %>
+			<%- include ('partials/navigation3.ejs') -%>
+
+    <main>
+			<div class="personal_connections">
+			<h1 id="heading">Connections</h1>
+			<div class="sub_connections">
+					<% if(userConnections.length>0){ %>
+				<table>
+				  <tr>
+				    <th>Events</th>
+				    <th>Category</th>
+				    <th>Going</th>
+				    <th></th>
+				  </tr>
+					<% userConnections.forEach(function(item){ %>
+				  <tr>
+				    <td><%= item.connectionName %></td>
+				    <td><%= item.connectionTopic %></td>
+				    <td><%= item.rsvp %></td>
+				    <td>
+							<form method="post">
+								<button class="btn" formmethod="post" formaction="/connection?id=<%= item.connectionID %>">Update</button>
+								<button class="btn" formmethod="post" formaction="/savedConnections?id=<%=item.connectionID%>">Delete</button>
+							</form>
+				    </td>
+				  </tr>
+					<% }); %>
+				</table>
+				<% } else{ %>
+					<div>
+						<h2>You should select atleast one connection or create a new connection to view the saved connections list. </h2>
+					</div>
+					<% } %>
+			</div>
+		</div>
+</main>
+<%- include ('partials/footer.ejs'); -%>
+	</body>
+</html>

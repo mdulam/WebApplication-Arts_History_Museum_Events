@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Index Page</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/styles/stylesheet.css">
+	</head>
+	<body>
+		<% if(session!=undefined){%>
+			<%- include ('partials/header.ejs'); %>
+			<%- include ('partials/navigation3.ejs') -%>
+	<%} else { %>
+		<%- include ('partials/header2.ejs'); %>
+		<%- include ('partials/navigation.ejs') -%>
+		<% } %>
+		<main id="setHeight">
+			<div id=homeSection>
+<img src="/assets/images/ahm.png" alt="Art History Museum">
+</div>
+			<div id="alignCenter">
+			<h2>
+				Welcome to the Art and History Museum events.
+			</h2>
+<div id="mainPara">
+			<p>
+				Museums are managers of consciousness. They give us an interpretation of history, of how to view the world and locate ourselves in it. They are, if you want to put it in positive terms, great educational institutions.
+			</p>
+			<p>
+				Discover all the happening and upcoming events and shows. Take a look at the museum's current and upcoming events and exhibitions
+			</p>
+		</div>
+			</div>
+
+		</main>
+
+<br>
+<br>
+<br>
+   <%- include ('partials/footer.ejs'); -%>
+	</body>
+</html>

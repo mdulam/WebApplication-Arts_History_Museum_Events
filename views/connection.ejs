@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Connection Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="assets/styles/stylesheet.css">
+</head>
+
+<body>
+	<% if(session!=undefined){%>
+	<%- include ('partials/header.ejs'); %>
+	<%- include ('partials/navigation3.ejs') -%>
+	<%} else { %>
+	<%- include ('partials/header2.ejs'); %>
+	<%- include ('partials/navigation2.ejs') -%>
+	<% } %>
+	<main>
+		<div class="firstitem">
+			<h1><%= connectionDetails.connectionName %></h1>
+			<div class="connectionDetailImage">
+				<img src="/assets/images/rome.jpg" alt="profile">
+			</div>
+			<div class="connectiondetailText">
+				<p>Hosted by <%= connectionDetails.connectionHostedBy %></p>
+				<p>Duration: <%= connectionDetails.connectionDuration %></p>
+				<p>Timings: <%= connectionDetails.connectionTimings %></p>
+			</div>
+		</div>
+		<div class="connectiondetailButtonText">
+			<p>Are you Joining?</p>
+			<form action="<% if(session!=undefined){ %>
+				 				savedConnections?id=<%=connectionDetails.getConnectionId%>
+			 			<% } else { %>
+							login
+						<% } %>" method="<% if(session!=undefined){ %>post<% } else{ %>get<% } %>">
+				<button id="Yes" class="btn" name="going" value="yes">Yes</button>
+				<button id="No" class="btn" name="going" value="no">No</button>
+				<button id="Maybe" class="btn" name="going" value="maybe">Maybe</button>
+			</form>
+		</div>
+		<div class="DetailText">
+			<h1>Details:</h1>
+			<p><%= connectionDetails.connectionDetail %></p>
+		</div>
+	</main>
+	<%- include ('partials/footer.ejs'); -%>
+</body>
+
+</html>

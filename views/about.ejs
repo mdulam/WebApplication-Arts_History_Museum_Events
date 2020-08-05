@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>About Page</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css">
+	</head>
+	<body>
+	<% if(session!=undefined){%>
+		<%- include ('partials/header.ejs'); %>
+		<%- include ('partials/navigation3.ejs') -%>
+<%} else { %>
+	<%- include ('partials/header2.ejs'); %>
+	<%- include ('partials/navigation2.ejs') -%>
+	<% } %>
+
+    <main>
+			<h1 id="heading">Art and History Museum Events</h1>
+			<div id="aboutpara">
+				<p>The Art and History Museum's events are typically based on many types of categories<br></p>
+					<ul>
+						<li>National archaeology</li>
+						<li>Antiquity</li>
+						<li>European civilisations</li>
+						<li>Non-European civilisations</li>
+						<li>Asian civilisations</li>
+						<li>Non-Asian civilisations</li>
+						<li>Art</li>
+						<li>Science</li>
+					</ul>
+
+				<p>
+					All together the Art and History Museum events is a place where all the trending events and exhibitions are conducted.
+				</p>
+			</div>
+
+    </main>
+  <%- include ('partials/footer.ejs'); -%>
+	</body>
+</html>

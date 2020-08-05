@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Page</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/styles/stylesheet.css">
+	</head>
+	<body>
+		<% if(session!=undefined){%>
+			<%- include ('partials/header.ejs'); %>
+			<%- include ('partials/navigation3.ejs') -%>
+	<%} else { %>
+		<%- include ('partials/header2.ejs'); %>
+		<%- include ('partials/navigation2.ejs') -%>
+		<% } %>
+    <main>
+			<h1 id="heading">Contact Details</h1>
+			<div class="contactTable">
+				<table>
+				  <tr>
+				    <th>Contact Type</th>
+				    <th></th>
+				  </tr>
+				  <tr>
+				    <td>Facebook</td>
+				    <td>Art_History_Museum_Events</td>
+				  </tr>
+					<tr>
+				    <td>Instagram</td>
+				    <td>Art_History_Museum_Events</td>
+				  </tr>
+					<tr>
+				    <td>Twitter</td>
+				    <td>Art_History_Museum_Events</td>
+				  </tr>
+					<tr>
+				    <td>Mobile</td>
+				    <td>+1 704-252-1399</td>
+				  </tr>
+					<tr>
+				    <td>Email</td>
+				    <td>ahm@gmail.com</td>
+				  </tr>
+				</table>
+			</div>
+</main>
+    <%- include ('partials/footer.ejs'); -%>
+	</body>
+</html>

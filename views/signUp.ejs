@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sign Up Page</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css">
+	</head>
+	<body>
+		
+		<%- include ('partials/header2.ejs'); %>
+		<%- include ('partials/navigation2.ejs') -%>
+  <form action="/signup" method="post">
+    <div class="containerLogin">
+      <h2>Sign Up</h2>
+      <p>Please enter your details to sign-in.</p>
+
+      <label for="userID"><b>Username</b></label>
+	  <input type="text" id="userID" placeholder="Enter UserID" name="userID" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'userID') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+
+      <label for="firstName"><b>First Name</b></label>
+	  <input type="firstName" id="firstName" placeholder="Enter First Name" name="firstName" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'firstName') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+      <label for="lastName"><b>Last Name</b></label>
+	  <input type="lastName" id="lastName" placeholder="Enter Last Name" name="lastName" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'lastName') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+      <label for="emailID"><b>Email ID</b></label>
+	  <input type="emailID" id="emailID" placeholder="Enter email ID" name="emailID" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'emailID') {%><%=error.msg%><%}%><%})%><%}%></label>
+      
+      <label for="address"><b>Address</b></label>
+	  <input type="address" id="address" placeholder="Enter Address" name="address" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'address') {%><%=error.msg%><%}%><%})%><%}%></label>
+      
+      <label for="password"><b>Password</b></label>
+	  <input type="password" id="password" placeholder="Enter Password" name="password" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'password') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+	  <label for="repassword"><b> Re-type Password</b></label>
+	  <input type="password" id="repassword" placeholder="Enter Password again" name="repassword" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'repassword') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+      <input type="submit" class="btn" value="Sign Up">
+
+    </div>
+  </form>
+  <%- include ('partials/footer.ejs'); -%>
+	</body>
+</html>

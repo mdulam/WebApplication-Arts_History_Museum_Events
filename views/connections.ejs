@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Connections Page</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/styles/stylesheet.css">
+	</head>
+	<body>
+		<% if(session!=undefined){%>
+			<%- include ('partials/header.ejs'); %>
+			<%- include ('partials/navigation3.ejs') -%>
+	<%} else { %>
+		<%- include ('partials/header2.ejs'); %>
+		<%- include ('partials/navigation2.ejs') -%>
+		<% } %>
+    <main id=height>
+  <% myTopics.forEach(function(connectionTopic){ %>
+			<div class="firsthead">
+		<h1 class="firstitem">
+			<%= connectionTopic %>
+		</h1>
+		</div>
+		<div class="item">
+		<ul>
+			<% myConnections.forEach(function(item){ %>
+					<% if(item.connectionTopic == connectionTopic){ %>
+			<li>
+				<a class="textdecoration" href="/connection?id=<%= item.connectionID %>" ><%= item.connectionName %></a>
+			</li>
+			<% } %>
+		<% }); %>
+		</ul>
+	</div>
+	  <% }); %>
+		</main>
+    <%- include ('partials/footer.ejs'); -%>
+	</body>
+</html>

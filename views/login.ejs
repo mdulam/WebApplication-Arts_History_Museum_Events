@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css">
+</head>
+
+<body id="inputLogin">
+	<% if(session!=undefined){%>
+	<%- include ('partials/header.ejs'); %>
+	<%- include ('partials/navigation3.ejs') -%>
+	<%} else { %>
+	<%- include ('partials/header2.ejs'); %>
+	<%- include ('partials/navigation2.ejs') -%>
+	<% } %>
+	<form action="/login" method="post">
+		<div class="containerLogin">
+			<h2>
+				Login
+			</h2>
+			<% var scale_text = 'login'; %>	
+			<%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'heading') {%><% scale_text = 'signUp'; %> <%}%><%})%><%}%>
+
+			 <% if(scale_text='signUp'){ %>
+				<label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'heading') {%><%=error.msg%><%}%><%})%><%}%></label>
+			<% } %>
+
+      <label for="username"><b>Username</b></label>
+	  <input type="text" id="username" placeholder="Enter Username" name="username" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'username') {%><%=error.msg%><%}%><%})%><%}%></label>
+
+
+      <label for="password"><b>Password</b></label>
+	  <input type="password" id="password" placeholder="Enter Password" name="password" required>
+	  <label class="error"><%if(errors) {%><%errors.forEach(function(error) {%><%if(error.param == 'password') {%><%=error.msg%><%}%><%})%><%}%></label><br><br>
+
+
+      <input type="submit" class="btn" value="Login">
+
+    </div>
+  </form>
+  <div class="testinput">
+	  <h2>
+		  <p>
+			I have used password hashing and salting for this application. So for your convinience to login and check the application, here are the login credentials of a user
+		  </p>
+		  <p>
+			Username: Megh007
+		  </p>
+		  <p>
+			  Password: meghana
+		  </p>
+		  <p>
+			  Or you can signUp and create a new user to login.
+		  </p>
+	  </h2>
+  </div>
+  <%- include ('partials/footer.ejs'); -%>
+</body>
+
+</html>

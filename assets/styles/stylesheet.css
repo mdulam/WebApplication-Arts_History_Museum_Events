@@ -1,0 +1,442 @@
+*{
+ padding:0px;
+ border: 0px;
+ margin: 0px;
+}
+
+body{
+	height: 100%;
+	line-height: 1.6em;
+ }
+
+ header{
+   width: 100%;
+     background-color: silver;
+     margin: auto;
+     height: 100px;
+     color: black;
+}
+
+#nameRight{
+  float: right;
+  margin-right: 20px;
+}
+  .usernavigation{
+    height: 30px;
+      background-color: silver;
+      margin: auto;
+      float: right;
+      color: black;
+      width: auto;
+      font-size: larger;
+  }
+
+.generalnavigation{
+	width: 100%;
+	height: 30px;
+	background-color: silver;
+	margin: auto;
+	float: left;
+	padding-bottom: 10px;
+	color:black;
+  border-top: 3px solid black;
+  padding-top: 10px;
+
+}
+
+.generalnavigation a{
+	color:black;
+	text-decoration: none;
+	font-size:18px;
+	padding-left: 20px;
+}
+
+main{
+	padding-top: 30px;
+	width: 100%;
+	margin: auto;
+	height:500px;
+	font-family: verdana;
+}
+
+footer {
+  background-color: black;
+    color: #ffffff;
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    bottom:0;
+    font-size: larger;
+}
+
+#firstDiv, #secondDiv, #thirdDiv{
+  float:left;
+}
+
+#firstDiv{
+  width:30%;
+}
+
+#secondDiv, #thirdDiv, #fourthDiv{
+  width:20%;
+}
+
+#fourthDiv{
+  float: right;
+}
+
+.social {
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+
+header img{
+	padding: 10px;
+	height:80px;
+	float: left;
+}
+
+header h1{
+  padding-top: 30px;
+    font-style: oblique;
+    font-family: serif;
+    font-size: 35px;
+}
+
+.usernavigation li{
+	display: inline;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-right: solid;
+	border-color: black;
+}
+
+.usernavigation ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+
+.usernavigation ul{
+	padding-top: 15px;
+  margin-right: 10px;
+}
+
+
+
+
+
+main h1{
+	margin-left: 20px;
+	padding-top: 50px;
+  font-style: oblique;
+    font-family: serif;
+}
+main p{
+	/* width:70%;
+  margin-left: 20px; */
+    margin-top: 10px;
+}
+
+#mainPara{
+  padding-left: 50px;
+    padding-right: 50px;
+}
+
+.connectionDetailImage img{
+	width: 10%
+	height:10%;
+	float: left;
+}
+
+.buttonContent{
+	padding-bottom: 100%
+	float: right;
+}
+
+.a{
+	float: ;
+}
+.c{
+	float: right;
+	padding-top: 0px;
+}
+.d{
+	float:right;
+	margin: 5px;
+	background-color: green;
+	border-color: green;
+	padding: 5px;
+	color: white;
+	text-decoration: bold;
+	border-radius: 10px;
+    box-shadow: 0 9px #999;
+}
+.connectiondetailText p{
+
+	padding-top: 0px;
+}
+
+.connectiondetailText button{
+	float:right;
+	padding-top: 50px;
+}
+
+.firsthead{
+  margin-top: 50px;
+    margin-left: 30px;
+}
+
+.firstitem{
+	width:auto;
+	margin: auto;
+	padding-top: : 20px;
+	height: 50px;
+}
+
+.connectiondetailButtonText{
+  margin-left: 55%;
+      margin-top: 54px;}
+
+.connectiondetailText{
+	width:auto;
+	float: left;
+	padding: 20px;
+	height: 150px;
+}
+
+.personal_connections{
+	width:auto;
+	margin: auto;
+	padding: 20px;
+	height: 500px;
+}
+
+.sub_connections{
+	padding-top: 20px;
+	padding-bottom: 20px;
+  padding-top: 36px;
+    padding-left: 150px;
+}
+
+.place-holder{
+	float: right;
+	text-decoration: bold;
+	color: black;
+}
+
+table{
+	padding-top: 40px;
+	border: 1px solid black;
+	border-width: 2px;
+  	border-collapse: collapse;
+}
+
+th, td {
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-width: 2px;
+  	border-collapse: collapse;
+}
+
+td button{
+	background-color: black;
+	border-color: white;
+	padding: 5px;
+	color: white;
+	text-decoration: bold;
+	padding-right: 5px;
+}
+
+.item
+{
+	margin: auto;
+    padding-top: 15px;
+	padding-left: 100px;
+}
+
+.item2
+{
+	margin: auto;
+
+	padding-left: 300px;
+}
+
+.connectionDetailImage
+{
+  padding-left: 20px;
+padding-top: 20px;
+}
+ .DetailText{
+margin-top: 10%;
+}
+.DetailText h3{
+	padding-left: 40px;
+} */
+.DetailText p{
+	padding-right:300px;
+	padding-top: 10px;
+}
+
+.personal_connections table{
+	padding-right:100px;
+	padding-left:100px;
+	padding-top: 100px;
+}
+
+#Yes{
+	background-color: black;
+	border-color:#B37700;
+	padding: 5px;
+	color: white;
+}
+
+#No{
+	background-color: black;
+	border-color:#B37700;
+	padding: 5px;
+	color: white;
+}
+
+#Maybe{
+	background-color: black;
+	border-color: #B37700;
+	padding: 5px;
+	color: white;
+}
+
+#alignCenter{
+  text-align: center;
+}
+
+#alignCenter p{
+  width: 100% !important;
+}
+
+#setHeight{
+  height: 100%;
+}
+#setHeight img{
+  width: 100%;
+}
+
+.DetailText p{
+  margin-left: 20px;
+}
+.personal_connections{
+  margin-top: 30px;
+}
+
+.btn:hover
+{
+background-image:none !important;
+background-color:#C0C0C0 !important;
+color:#000000 !important;
+border-color:#000000 !important;
+
+}
+
+.textdecoration{
+text-decoration: none !important;
+color:#000000;
+}
+.textdecoration:hover{
+text-decoration: none !important;
+color:#ffffff;
+font-size: 150%;
+background:#B37700;
+}
+
+.navtextdecoration:hover{
+  color:#ffffff;
+  background:#B37700;
+}
+
+#heading{
+  padding-left: 548px;
+}
+
+input[type=text],input[type=date] ,input[type=time], input[type=password], input[type=firstName],input[type=lastName],input[type=emailID],input[type=address],input[type=repassword],textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+/* margin-bottom: 16px; */
+  resize: vertical;
+  font-family: verdana, sans-serif;
+
+}
+
+.error{
+	color:red;
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: verdana, sans-serif;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  font-family: verdana, sans-serif;
+
+}
+
+.container {
+  border-radius: 5px;
+height: 850px;
+  padding: 20px;
+}
+
+.containerLogin {
+    border-radius: 5px;
+    height: fit-content;
+    padding: 132px;
+    padding-right: 500px;
+    padding-left: 500px;
+    font-family: verdana, sans-serif;
+
+}
+
+label {
+    display: block;
+    font-family: verdana, sans-serif;
+}
+
+/* input,
+label {
+    margin: .4rem 0;
+} */
+#aboutpara{
+  padding-left: 300px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+.contactTable{
+	padding-top: 20px;
+	padding-bottom: 20px;
+  padding-top: 36px;
+    padding-left: 500px;
+}
+
+#height{
+  height: 1000px;
+}
+
+
+#inputLogin{
+	height: 1000px;
+}
